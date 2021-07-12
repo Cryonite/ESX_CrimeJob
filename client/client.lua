@@ -43,7 +43,7 @@ Citizen.CreateThread(function()
   if Config.MafiaStations[JobName] ~= nil then
       MafiaStations = Config.MafiaStations[JobName]
   end
-
+  -- na restart automatisch client based refreshen
   RefreshBlips()
   StartKeyListener()
 
