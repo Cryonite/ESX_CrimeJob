@@ -12,6 +12,10 @@ Config.EnableLicenses             = false
 Config.MaxInService               = -1
 Config.Locale                     = 'nl'
 
+--[[
+  Dit is nog een testje -_-
+]]--
+
 Config.Items = {
   bread = { price = 1, label = 'Brood' }
 }
