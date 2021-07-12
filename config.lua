@@ -12,6 +12,11 @@ Config.EnableLicenses             = false
 Config.MaxInService               = -1
 Config.Locale                     = 'nl'
 
+Config.Items = {
+  blowpipe = { price = 5000, label = 'Snijbrander' },
+  ammopistol = { price = 10000, label = '.45 ACP Munitie (Pistool)' }
+}
+
 Config.MafiaStations = {
 
   Mafia = {

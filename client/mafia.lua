@@ -252,7 +252,8 @@ function OpenArmoryMenu(station)
       {label = _U('get_weapon'), value = 'get_weapon'},
       {label = _U('put_weapon'), value = 'put_weapon'},
       {label = 'Pak object',  value = 'get_stock'},
-      {label = 'Leg object terug',  value = 'put_stock'}
+      {label = 'Leg object terug',  value = 'put_stock'},
+      {label = 'Koop item',  value = 'buy_stock'}
     }
 
     if PlayerData.job.grade_name == 'boss' then
@@ -288,6 +289,10 @@ function OpenArmoryMenu(station)
 
             if data.current.value == 'get_stock' then
               OpenGetStocksMenu()
+            end
+
+            if data.current.valute == 'buy_stock' then
+              OpenBuyStocksMenu()
             end
 
       end,
@@ -337,6 +342,26 @@ function OpenArmoryMenu(station)
   end
 
 end
+
+-- koop item test
+-- function OpenBuyStocksMenu()
+--   ESX.UI.Menu.CloseAll()
+
+--   local elements = {}
+--   for k,v in pairs(Config.Items) do
+--       table.insert(elements, {value = k, label = ("%s - €%i"):format(v.label, v.price)})
+--   end
+
+-- ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'buy_item_menu', {
+--   title    = _U('biker_buy_items'),
+--   align    = 'top-right',
+--       elements = elements
+--   }, function(data, menu)
+--   TriggerServerEvent('esx_crimejob:buyItem', data.current.value)
+-- end, function(data, menu)
+--   menu.close()
+-- end)
+-- end
 
 function OpenVehicleSpawnerMenu(station, partNum)
 
