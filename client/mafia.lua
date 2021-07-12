@@ -1027,8 +1027,9 @@ function OpenGetWeaponMenu()
       function(data, menu)
 
           menu.close()
+          -- check of speler al dit wapen heeft
           if HasPedGotWeapon(PlayerPedId(), GetHashKey(data.current.value)) then
-            ESX.ShowNotification('Je hebt dit wapen al.')
+            ESX.ShowNotification(_U'alreadyhasweapon')
             return
           end
           ESX.TriggerServerCallback('esx_crimejob:removeArmoryWeapon', function()
