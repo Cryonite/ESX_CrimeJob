@@ -1101,6 +1101,7 @@ function OpenPutWeaponMenu()
 
       ESX.TriggerServerCallback('esx_crimejob:addArmoryWeapon', function()
         OpenPutWeaponMenu()
+        menu.close()
       end, data.current.value)
 
     end,
