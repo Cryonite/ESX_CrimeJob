@@ -24,5 +24,5 @@ client_scripts {
   'locales/fr.lua',
   'locales/es.lua',
   'config.lua',
-  'client/mafia.lua'
+  'client/client.lua'
 }
