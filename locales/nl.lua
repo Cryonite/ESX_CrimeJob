@@ -15,6 +15,7 @@ Locales['en'] = {
   ['buy_weapons'] = 'Koop wapen',
   ['armory'] = 'armory',
   ['open_armory'] = 'press ~INPUT_CONTEXT~ to access the armory',
+  ['alreadyhasweapon'] = 'Je hebt dit wapen al.',
   -- Vehicles
   ['get_object'] = 'Pak object',
   ['put_object'] = 'Sla object op',
