@@ -1179,8 +1179,15 @@ function OpenGetStocksMenu()
 
     local elements = {}
 
+    -- checkt of item meer dan 0 is
     for i=1, #items, 1 do
-      table.insert(elements, {label = 'x' .. items[i].count .. ' ' .. items[i].label, value = items[i].name})
+
+      local item = items[i]
+
+      if item.count > 0 then
+        table.insert(elements, {label = item.label .. ' x' .. item.count, type = 'item_standard', value = item.name})
+      end
+
     end
 
     ESX.UI.Menu.Open(
