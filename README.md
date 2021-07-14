@@ -2,9 +2,16 @@
  Better crime job
  
  # Fixed:
-  Duplicate bug fixed
+  Duplicate bug weapon fixed
   
-  Check if player already has weapon
+  Duplicate bug item fixed
+  
+  If item = 0 then don't show in armory same with weapons
+  
+  An check if player already has that weapon
+  
+  Blip only if you have this job (for the house)
+  
 
 
 
