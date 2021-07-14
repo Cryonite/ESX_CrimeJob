@@ -8,7 +8,10 @@
   
   If item = 0 then don't show in armory same with weapons
   
-  Check if player already has weapon
+  An check if player already has that weapon
+  
+  Blip only if you have this job (for the house)
+  
 
 
 
