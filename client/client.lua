@@ -1537,25 +1537,48 @@ Citizen.CreateThread(function()
   end
 end)
 
--- Create blips
+-- verbeterde blip dingetjes
 Citizen.CreateThread(function()
-
-  for k,v in pairs(Config.MafiaStations) do
-
-    local blip = AddBlipForCoord(v.Blip.Pos.x, v.Blip.Pos.y, v.Blip.Pos.z)
-
-    SetBlipSprite (blip, v.Blip.Sprite)
-    SetBlipDisplay(blip, v.Blip.Display)
-    SetBlipScale  (blip, v.Blip.Scale)
-    SetBlipColour (blip, v.Blip.Colour)
-    SetBlipAsShortRange(blip, true)
-
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString(_U('map_blip'))
-    EndTextCommandSetBlipName(blip)
-
+  while ESX == nil do
+      TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+      Citizen.Wait(500)
   end
 
+  while ESX.GetPlayerData().job == nil do
+      Citizen.Wait(500)
+  end
+
+  job = ESX.GetPlayerData().job.name
+  PlayerData = ESX.GetPlayerData() -- vraag mensen hun job aan
+end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(_job)
+  job = _job.name
+end)
+
+
+
+local blips = {
+  {colour=2, id=274, x = 14.40, y = 550.1, z = 176.187}
+}
+   
+Citizen.CreateThread(function()
+
+if job == 'mafia' then
+ for _, info in pairs(blips) do
+   info.blip = AddBlipForCoord(info.x, info.y, info.z)
+   SetBlipSprite(info.blip, info.id)
+   SetBlipDisplay(info.blip, 4)
+   SetBlipScale(info.blip, 1.0)
+   SetBlipColour(info.blip, info.colour)
+   SetBlipAsShortRange(info.blip, true)
+   BeginTextCommandSetBlipName("STRING")
+   AddTextComponentString(_U'map_blip')
+   AddTextComponentString(info.title)
+   EndTextCommandSetBlipName(info.blip)
+ end
+ end
 end)
 
 -- Display markers
