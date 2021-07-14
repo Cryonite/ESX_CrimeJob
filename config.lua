@@ -24,14 +24,6 @@ Config.MafiaStations = {
 
   Mafia = {
 
-    -- Blip = {
-    --   Pos     = { x = 425.130, y = -979.558, z = 30.711 },
-    --   Sprite  = 60,
-    --   Display = 4,
-    --   Scale   = 1.2,
-    --   Colour  = 29,
-    -- },
-
     AuthorizedWeapons = {
       { name = 'WEAPON_COMBATPISTOL',     price = 4000 },
       { name = 'WEAPON_ASSAULTSMG',       price = 15000 },
