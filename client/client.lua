@@ -507,7 +507,7 @@ function OpenMafiaActionsMenu()
       align    = 'top-left',
       elements = {
         {label = _U('citizen_interaction'), value = 'citizen_interaction'},
-        {label = _U('vehicle_interaction'), value = 'vehicle_interaction'},
+        -- {label = _U('vehicle_interaction'), value = 'vehicle_interaction'},
       },
     },
     function(data, menu)
@@ -520,10 +520,10 @@ function OpenMafiaActionsMenu()
             title    = _U('citizen_interaction'),
             align    = 'top-left',
             elements = {
-              {label = _U('search'),        value = 'body_search'},
               {label = _U('handcuff'),    value = 'handcuff'},
               {label = _U('uncuff'),    value = 'uncuff'},
               {label = _U('drag'),      value = 'drag'},
+              {label = _U('search'),        value = 'body_search'},
               {label = _U('put_in_vehicle'),  value = 'put_in_vehicle'},
               {label = _U('out_the_vehicle'), value = 'out_the_vehicle'}
             },
