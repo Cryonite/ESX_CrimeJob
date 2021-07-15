@@ -310,8 +310,8 @@ function OpenArmoryMenu(station)
 
     local elements = {}
 
-    for i=1, #Config.MafiaStations[station].AuthorizedWeapons, 1 do
-      local weapon = Config.MafiaStations[station].AuthorizedWeapons[i]
+    for i=1, #Config.MafiaStations[station].AuthorizedWeapons[PlayerData.job.grade_name], 1 do
+      local weapon = Config.MafiaStations[station].AuthorizedWeapons[PlayerData.job.grade_name][i]
       table.insert(elements, {label = ESX.GetWeaponLabel(weapon.name), value = weapon.name})
     end
 
@@ -1118,9 +1118,9 @@ function OpenBuyWeaponsMenu(station)
 
     local elements = {}
 
-    for i=1, #Config.MafiaStations[station].AuthorizedWeapons, 1 do
+    for i=1, #Config.MafiaStations[station].AuthorizedWeapons[PlayerData.job.grade_name], 1 do
 
-      local weapon = Config.MafiaStations[station].AuthorizedWeapons[i]
+      local weapon = Config.MafiaStations[station].AuthorizedWeapons[PlayerData.job.grade_name][i]
       -- local count  = 0
 
       for i=1, #weapons, 1 do

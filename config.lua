@@ -25,12 +25,30 @@ Config.MafiaStations = {
   Mafia = {
 
     AuthorizedWeapons = {
-      { name = 'WEAPON_COMBATPISTOL',     price = 4000 },
-      { name = 'WEAPON_ASSAULTSMG',       price = 15000 },
-      { name = 'WEAPON_ASSAULTRIFLE',     price = 25000 },
-      { name = 'WEAPON_SWITCHBLADE',      price = 500 },
-	  
+      soldato = {
+        { name = 'WEAPON_BAT', price = 60000 },
+      },
+      capo = {
+        { name = 'WEAPON_BAT', price = 60000 },
+      },
+      consigliere = {
+        { name = 'WEAPON_BAT', price = 60000 },
+        { name = 'WEAPON_PISTOL', price = 120000 },
+      },
+      boss = {
+        { name = 'WEAPON_BAT', price = 60000 },
+        { name = 'WEAPON_PISTOL', price = 120000 },
+        { name = 'WEAPON_ASSAULTRIFLE', price = 230000 },
+      },
     },
+
+    -- AuthorizedWeapons = {
+    --   { name = 'WEAPON_COMBATPISTOL',     price = 4000 },
+    --   { name = 'WEAPON_ASSAULTSMG',       price = 15000 },
+    --   { name = 'WEAPON_ASSAULTRIFLE',     price = 25000 },
+    --   { name = 'WEAPON_SWITCHBLADE',      price = 500 },
+	  
+    -- },
 
 	  AuthorizedVehicles = {
 		  { name = 'btype',      label = 'Roosevelt' },
