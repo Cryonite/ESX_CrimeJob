@@ -1121,17 +1121,17 @@ function OpenBuyWeaponsMenu(station)
     for i=1, #Config.MafiaStations[station].AuthorizedWeapons, 1 do
 
       local weapon = Config.MafiaStations[station].AuthorizedWeapons[i]
-      local count  = 0
+      -- local count  = 0
 
       for i=1, #weapons, 1 do
         if weapons[i].name == weapon.name then
-          count = weapons[i].count
+          -- count = weapons[i].count
           break
         end
       end
 
       table.insert(elements, {
-        label = 'x' .. count .. ' ' .. ESX.GetWeaponLabel(weapon.name) .. ' €' .. weapon.price,
+        label = ' ' .. ESX.GetWeaponLabel(weapon.name) .. ' €' .. weapon.price,
         value = weapon.name,
         price = weapon.price,
     })
