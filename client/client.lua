@@ -1038,7 +1038,7 @@ function OpenGetWeaponMenu()
 
     for i=1, #weapons, 1 do
       if weapons[i].count > 0 then
-        table.insert(elements, {label = 'x' .. weapons[i].count .. ' ' .. ESX.GetWeaponLabel(weapons[i].name), value = weapons[i].name})
+        table.insert(elements, {label = '' .. weapons[i].count .. ' ' .. ESX.GetWeaponLabel(weapons[i].name), value = weapons[i].name})
       end
     end
 
@@ -1185,7 +1185,7 @@ function OpenGetStocksMenu()
       local item = items[i]
 
       if item.count > 0 then
-        table.insert(elements, {label = item.label .. ' x' .. item.count, type = 'item_standard', value = item.name})
+        table.insert(elements, {label = item.label .. ' ' .. item.count, type = 'item_standard', value = item.name})
       end
 
     end
@@ -1246,7 +1246,7 @@ function OpenPutStocksMenu()
       local item = inventory.items[i]
 
       if item.count > 0 then
-        table.insert(elements, {label = item.label .. ' x' .. item.count, type = 'item_standard', value = item.name})
+        table.insert(elements, {label = item.label .. ' ' .. item.count, type = 'item_standard', value = item.name})
       end
 
     end
