@@ -37,7 +37,7 @@ Config.MafiaStations = {
 	  },
 
     Cloakrooms = {
-      { x = 9.283, y = 528.914, z = 169.635 },
+      -- { x = 9.283, y = 528.914, z = 169.635 },
     },
 
     Armories = {
