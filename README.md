@@ -12,6 +12,8 @@
   
   Blip only if you have this job (for the house)
   
+  Buy_weapons based on job_grades
+  
 
 
 
