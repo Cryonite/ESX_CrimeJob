@@ -1214,7 +1214,6 @@ function OpenGetStocksMenu()
             else
               menu2.close()
               menu.close()
-              OpenGetStocksMenu()
 
               TriggerServerEvent('esx_crimejob:getStockItem', itemName, count)
             end
@@ -1275,7 +1274,6 @@ function OpenPutStocksMenu()
             else
               menu2.close()
               menu.close()
-              OpenPutStocksMenu()
 
               TriggerServerEvent('esx_crimejob:putStockItems', itemName, count)
             end
