@@ -251,8 +251,8 @@ function OpenArmoryMenu(station)
     local elements = {
       {label = _U('get_weapon'), value = 'get_weapon'},
       {label = _U('put_weapon'), value = 'put_weapon'},
-      {label = 'Pak object',  value = 'get_stock'},
-      {label = 'Leg object terug',  value = 'put_stock'}
+      {label = _U'get_object',  value = 'get_stock'},
+      {label = _U'put_object',  value = 'put_stock'}
       -- {label = 'Koop item',  value = 'buy_stock'}
     }
 
